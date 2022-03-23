@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ListViewController.swift
 //  BetBasket
 //
 //  Created by Baran Gungor on 23.03.2022.
@@ -7,13 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .purple
     }
-
 
 }
 

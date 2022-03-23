@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		950C3E6B27EB76B60027160D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E6A27EB76B60027160D /* AppDelegate.swift */; };
-		950C3E6D27EB76B60027160D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E6C27EB76B60027160D /* SceneDelegate.swift */; };
-		950C3E6F27EB76B60027160D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E6E27EB76B60027160D /* ViewController.swift */; };
-		950C3E7227EB76B60027160D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950C3E7027EB76B60027160D /* Main.storyboard */; };
+		950C3E6F27EB76B60027160D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E6E27EB76B60027160D /* ListViewController.swift */; };
 		950C3E7427EB76B80027160D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950C3E7327EB76B80027160D /* Assets.xcassets */; };
 		950C3E7727EB76B80027160D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950C3E7527EB76B80027160D /* LaunchScreen.storyboard */; };
 		950C3E8227EB76B80027160D /* BetBasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E8127EB76B80027160D /* BetBasketTests.swift */; };
 		950C3E8C27EB76B80027160D /* BetBasketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E8B27EB76B80027160D /* BetBasketUITests.swift */; };
 		950C3E8E27EB76B80027160D /* BetBasketUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E8D27EB76B80027160D /* BetBasketUITestsLaunchTests.swift */; };
+		950C3E9F27EB78CA0027160D /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E9E27EB78CA0027160D /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +37,7 @@
 /* Begin PBXFileReference section */
 		950C3E6727EB76B60027160D /* BetBasket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetBasket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		950C3E6A27EB76B60027160D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		950C3E6C27EB76B60027160D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		950C3E6E27EB76B60027160D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		950C3E7127EB76B60027160D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		950C3E6E27EB76B60027160D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		950C3E7327EB76B80027160D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		950C3E7627EB76B80027160D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		950C3E7827EB76B80027160D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +46,7 @@
 		950C3E8727EB76B80027160D /* BetBasketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetBasketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		950C3E8B27EB76B80027160D /* BetBasketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetBasketUITests.swift; sourceTree = "<group>"; };
 		950C3E8D27EB76B80027160D /* BetBasketUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetBasketUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		950C3E9E27EB78CA0027160D /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +97,9 @@
 		950C3E6927EB76B60027160D /* BetBasket */ = {
 			isa = PBXGroup;
 			children = (
-				950C3E6A27EB76B60027160D /* AppDelegate.swift */,
-				950C3E6C27EB76B60027160D /* SceneDelegate.swift */,
-				950C3E6E27EB76B60027160D /* ViewController.swift */,
-				950C3E7027EB76B60027160D /* Main.storyboard */,
-				950C3E7327EB76B80027160D /* Assets.xcassets */,
-				950C3E7527EB76B80027160D /* LaunchScreen.storyboard */,
+				950C3E9A27EB77A10027160D /* App */,
+				950C3E9B27EB77B10027160D /* Scenes */,
+				950C3E9C27EB77CC0027160D /* Resources */,
 				950C3E7827EB76B80027160D /* Info.plist */,
 			);
 			path = BetBasket;
@@ -125,6 +120,40 @@
 				950C3E8D27EB76B80027160D /* BetBasketUITestsLaunchTests.swift */,
 			);
 			path = BetBasketUITests;
+			sourceTree = "<group>";
+		};
+		950C3E9A27EB77A10027160D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				950C3E6A27EB76B60027160D /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		950C3E9B27EB77B10027160D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				950C3E7527EB76B80027160D /* LaunchScreen.storyboard */,
+				950C3E9D27EB78B00027160D /* List */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		950C3E9C27EB77CC0027160D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				950C3E7327EB76B80027160D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		950C3E9D27EB78B00027160D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				950C3E6E27EB76B60027160D /* ListViewController.swift */,
+				950C3E9E27EB78CA0027160D /* ListViewModel.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +262,6 @@
 			files = (
 				950C3E7727EB76B80027160D /* LaunchScreen.storyboard in Resources */,
 				950C3E7427EB76B80027160D /* Assets.xcassets in Resources */,
-				950C3E7227EB76B60027160D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				950C3E6F27EB76B60027160D /* ViewController.swift in Sources */,
+				950C3E6F27EB76B60027160D /* ListViewController.swift in Sources */,
 				950C3E6B27EB76B60027160D /* AppDelegate.swift in Sources */,
-				950C3E6D27EB76B60027160D /* SceneDelegate.swift in Sources */,
+				950C3E9F27EB78CA0027160D /* ListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +325,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		950C3E7027EB76B60027160D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				950C3E7127EB76B60027160D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		950C3E7527EB76B80027160D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -367,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -444,7 +464,6 @@
 				INFOPLIST_FILE = BetBasket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +491,6 @@
 				INFOPLIST_FILE = BetBasket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
