@@ -15,6 +15,13 @@
 		950C3E8C27EB76B80027160D /* BetBasketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E8B27EB76B80027160D /* BetBasketUITests.swift */; };
 		950C3E8E27EB76B80027160D /* BetBasketUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E8D27EB76B80027160D /* BetBasketUITestsLaunchTests.swift */; };
 		950C3E9F27EB78CA0027160D /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E9E27EB78CA0027160D /* ListViewModel.swift */; };
+		950C3EA427EB7F0D0027160D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EA327EB7F0D0027160D /* NetworkManager.swift */; };
+		950C3EA727EB7F340027160D /* GeneralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EA627EB7F340027160D /* GeneralError.swift */; };
+		950C3EAB27EC427A0027160D /* ListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EAA27EC427A0027160D /* ListResponseModel.swift */; };
+		950C3EAD27EC6EF10027160D /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EAC27EC6EF10027160D /* BaseAPI.swift */; };
+		950C3EAF27EC6F060027160D /* OddsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EAE27EC6F060027160D /* OddsAPI.swift */; };
+		950C3EB127ECA1F00027160D /* OddsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EB027ECA1F00027160D /* OddsResponseModel.swift */; };
+		950C3EB327ECA9650027160D /* BaseErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EB227ECA9650027160D /* BaseErrorModel.swift */; };
 		ECCC5BAD4FD2C290D4C27D66 /* Pods_BetBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +56,13 @@
 		950C3E8B27EB76B80027160D /* BetBasketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetBasketUITests.swift; sourceTree = "<group>"; };
 		950C3E8D27EB76B80027160D /* BetBasketUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetBasketUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		950C3E9E27EB78CA0027160D /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		950C3EA327EB7F0D0027160D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		950C3EA627EB7F340027160D /* GeneralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralError.swift; sourceTree = "<group>"; };
+		950C3EAA27EC427A0027160D /* ListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponseModel.swift; sourceTree = "<group>"; };
+		950C3EAC27EC6EF10027160D /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		950C3EAE27EC6F060027160D /* OddsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsAPI.swift; sourceTree = "<group>"; };
+		950C3EB027ECA1F00027160D /* OddsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsResponseModel.swift; sourceTree = "<group>"; };
+		950C3EB227ECA9650027160D /* BaseErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseErrorModel.swift; sourceTree = "<group>"; };
 		A5B91695311908AD72A51524 /* Pods-BetBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetBasket.debug.xcconfig"; path = "Target Support Files/Pods-BetBasket/Pods-BetBasket.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetBasket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,7 +99,6 @@
 				A5B91695311908AD72A51524 /* Pods-BetBasket.debug.xcconfig */,
 				78D9280AE274B70FD968EC79 /* Pods-BetBasket.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -123,9 +136,11 @@
 			isa = PBXGroup;
 			children = (
 				950C3E9A27EB77A10027160D /* App */,
-				950C3E9B27EB77B10027160D /* Scenes */,
-				950C3E9C27EB77CC0027160D /* Resources */,
 				950C3E7827EB76B80027160D /* Info.plist */,
+				950C3E9C27EB77CC0027160D /* Resources */,
+				950C3E9B27EB77B10027160D /* Scenes */,
+				950C3EA927EC42660027160D /* Models */,
+				950C3EA027EB7B400027160D /* Utils */,
 			);
 			path = BetBasket;
 			sourceTree = "<group>";
@@ -179,6 +194,51 @@
 				950C3E9E27EB78CA0027160D /* ListViewModel.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		950C3EA027EB7B400027160D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EA527EB7F260027160D /* Helpers */,
+				950C3EA227EB7B520027160D /* Network */,
+				950C3EA127EB7B4C0027160D /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		950C3EA127EB7B4C0027160D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		950C3EA227EB7B520027160D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EA327EB7F0D0027160D /* NetworkManager.swift */,
+				950C3EAC27EC6EF10027160D /* BaseAPI.swift */,
+				950C3EAE27EC6F060027160D /* OddsAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		950C3EA527EB7F260027160D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EA627EB7F340027160D /* GeneralError.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		950C3EA927EC42660027160D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EAA27EC427A0027160D /* ListResponseModel.swift */,
+				950C3EB027ECA1F00027160D /* OddsResponseModel.swift */,
+				950C3EB227ECA9650027160D /* BaseErrorModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,9 +415,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950C3EA727EB7F340027160D /* GeneralError.swift in Sources */,
+				950C3EA427EB7F0D0027160D /* NetworkManager.swift in Sources */,
 				950C3E6F27EB76B60027160D /* ListViewController.swift in Sources */,
+				950C3EB327ECA9650027160D /* BaseErrorModel.swift in Sources */,
 				950C3E6B27EB76B60027160D /* AppDelegate.swift in Sources */,
+				950C3EAF27EC6F060027160D /* OddsAPI.swift in Sources */,
+				950C3EAB27EC427A0027160D /* ListResponseModel.swift in Sources */,
 				950C3E9F27EB78CA0027160D /* ListViewModel.swift in Sources */,
+				950C3EAD27EC6EF10027160D /* BaseAPI.swift in Sources */,
+				950C3EB127ECA1F00027160D /* OddsResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
