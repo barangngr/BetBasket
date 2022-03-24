@@ -19,6 +19,15 @@ final class ListViewController: UIViewController {
         return tableView
     }()
     
+    private let searchView: UISearchBar = {
+        let view = UISearchBar()
+        view.searchBarStyle = .minimal
+        view.placeholder = "Search Event"
+        view.tintColor = .descpColor
+        view.searchTextField.textColor = .headerColor
+        return view
+    }()
+    
     private var dataSource = [ListResponseModel]()
     private var viewModel = ListViewModel()
     
@@ -28,6 +37,7 @@ final class ListViewController: UIViewController {
         view.backgroundColor = .backColor
         tableView.dataSource = self
         tableView.delegate = self
+        searchView.delegate = self
         viewModel.delegate = self
         
         showActivityIndicator()
@@ -43,24 +53,44 @@ final class ListViewController: UIViewController {
     
     // MARK: Functions
     private func configureViews() {
-        view.addSubview(views: tableView)
-        tableView.fill(.all)
+        view.addSubview(views: searchView, tableView)
+        searchView.fill(.horizontal)
+        searchView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        
+        tableView.fill(.horizontal)
+        tableView.topAnchor.constraint(equalTo: searchView.bottomAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
-
-}
-
-// MARK: - Extension
-extension ListViewController: ListViewModelDelegate {
-    func didFetchRepos(_ data: [ListResponseModel]) {
-        dataSource = data
+    
+    private func reloadTableView() {
         hideActivityIndicator()
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
     
+}
+
+// MARK: - Extension
+extension ListViewController: ListViewModelDelegate {
+    func didFetchEvents(_ data: [ListResponseModel]) {
+        dataSource = data
+        reloadTableView()
+    }
+    
+    func didSearchEvents(_ data: [ListResponseModel]) {
+        dataSource = data
+        reloadTableView()
+    }
+    
     func showError(_ error: Error) {
         showAlert(error.localizedDescription)
+    }
+}
+
+extension ListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.searchBarResponse(searchText)
     }
 }
 
@@ -80,3 +110,4 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
         print(dataSource[indexPath.row].title ?? "")
     }
 }
+

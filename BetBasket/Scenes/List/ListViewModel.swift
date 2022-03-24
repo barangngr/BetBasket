@@ -8,13 +8,15 @@
 import Foundation
 
 protocol ListViewModelDelegate: AnyObject {
-    func didFetchRepos(_ data: [ListResponseModel])
+    func didFetchEvents(_ data: [ListResponseModel])
+    func didSearchEvents(_ data: [ListResponseModel])
     func showError(_ error: Error)
 }
 
 final class ListViewModel {
     
     // MARK: Properties
+    private var mainDataSource: [ListResponseModel]?
     weak var delegate: ListViewModelDelegate?
     
     // MARK: Functions
@@ -23,10 +25,20 @@ final class ListViewModel {
             guard let self = self else { return }
             switch result {
             case .success(let response):
-                self.delegate?.didFetchRepos(response)
+                self.mainDataSource = response
+                self.delegate?.didFetchEvents(response)
             case .failure(let error):
                 self.delegate?.showError(error)
             }
+        }
+    }
+    
+    func searchBarResponse(_ searchText: String) {
+        guard let mainDataSource = mainDataSource else { return }
+        if searchText == "" {
+            delegate?.didSearchEvents(mainDataSource)
+        } else {
+            delegate?.didSearchEvents(mainDataSource.filter({ $0.title?.contains(searchText.uppercased()) ?? false }))
         }
     }
     

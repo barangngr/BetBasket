@@ -194,6 +194,7 @@
 			children = (
 				950C3E7527EB76B80027160D /* LaunchScreen.storyboard */,
 				950C3E9D27EB78B00027160D /* List */,
+				950C3EC927ECF4E00027160D /* EventDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -290,6 +291,13 @@
 				950C3EC427ECB2310027160D /* Roboto-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		950C3EC927ECF4E00027160D /* EventDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EventDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

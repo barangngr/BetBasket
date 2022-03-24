@@ -16,6 +16,7 @@ final class ListViewTableViewCell: BaseTableViewCell {
         
         headerLabel.fill(.horizontal, constant: 15)
         headerLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 8).isActive = true
+        headerLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 15).isActive = true
         
         descpLabel.fill(.horizontal, constant: 15)
         descpLabel.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 2).isActive = true
