@@ -22,6 +22,15 @@
 		950C3EAF27EC6F060027160D /* OddsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EAE27EC6F060027160D /* OddsAPI.swift */; };
 		950C3EB127ECA1F00027160D /* OddsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EB027ECA1F00027160D /* OddsResponseModel.swift */; };
 		950C3EB327ECA9650027160D /* BaseErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EB227ECA9650027160D /* BaseErrorModel.swift */; };
+		950C3EB527ECAFA60027160D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EB427ECAFA60027160D /* UIViewController+Extension.swift */; };
+		950C3EB727ECAFC90027160D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EB627ECAFC90027160D /* UIView+Extension.swift */; };
+		950C3EB927ECAFE80027160D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EB827ECAFE80027160D /* UIColor+Extension.swift */; };
+		950C3EBD27ECB1070027160D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EBC27ECB1070027160D /* BaseTableViewCell.swift */; };
+		950C3EBF27ECB1300027160D /* ListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EBE27ECB1300027160D /* ListViewTableViewCell.swift */; };
+		950C3EC527ECB2310027160D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 950C3EC127ECB2310027160D /* Roboto-Bold.ttf */; };
+		950C3EC627ECB2310027160D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 950C3EC227ECB2310027160D /* Roboto-Medium.ttf */; };
+		950C3EC727ECB2310027160D /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 950C3EC327ECB2310027160D /* Roboto-Light.ttf */; };
+		950C3EC827ECB2310027160D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 950C3EC427ECB2310027160D /* Roboto-Regular.ttf */; };
 		ECCC5BAD4FD2C290D4C27D66 /* Pods_BetBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +72,15 @@
 		950C3EAE27EC6F060027160D /* OddsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsAPI.swift; sourceTree = "<group>"; };
 		950C3EB027ECA1F00027160D /* OddsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsResponseModel.swift; sourceTree = "<group>"; };
 		950C3EB227ECA9650027160D /* BaseErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseErrorModel.swift; sourceTree = "<group>"; };
+		950C3EB427ECAFA60027160D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		950C3EB627ECAFC90027160D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		950C3EB827ECAFE80027160D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		950C3EBC27ECB1070027160D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		950C3EBE27ECB1300027160D /* ListViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTableViewCell.swift; sourceTree = "<group>"; };
+		950C3EC127ECB2310027160D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		950C3EC227ECB2310027160D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		950C3EC327ECB2310027160D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		950C3EC427ECB2310027160D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		A5B91695311908AD72A51524 /* Pods-BetBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetBasket.debug.xcconfig"; path = "Target Support Files/Pods-BetBasket/Pods-BetBasket.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetBasket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -140,6 +158,7 @@
 				950C3E9C27EB77CC0027160D /* Resources */,
 				950C3E9B27EB77B10027160D /* Scenes */,
 				950C3EA927EC42660027160D /* Models */,
+				950C3EBA27ECB0D70027160D /* Views */,
 				950C3EA027EB7B400027160D /* Utils */,
 			);
 			path = BetBasket;
@@ -182,6 +201,7 @@
 		950C3E9C27EB77CC0027160D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				950C3EC027ECB2250027160D /* Fonts */,
 				950C3E7327EB76B80027160D /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -199,6 +219,7 @@
 		950C3EA027EB7B400027160D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				950C3EBB27ECB0FF0027160D /* Base */,
 				950C3EA527EB7F260027160D /* Helpers */,
 				950C3EA227EB7B520027160D /* Network */,
 				950C3EA127EB7B4C0027160D /* Extensions */,
@@ -209,6 +230,9 @@
 		950C3EA127EB7B4C0027160D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				950C3EB427ECAFA60027160D /* UIViewController+Extension.swift */,
+				950C3EB627ECAFC90027160D /* UIView+Extension.swift */,
+				950C3EB827ECAFE80027160D /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -239,6 +263,33 @@
 				950C3EB227ECA9650027160D /* BaseErrorModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		950C3EBA27ECB0D70027160D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EBE27ECB1300027160D /* ListViewTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		950C3EBB27ECB0FF0027160D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EBC27ECB1070027160D /* BaseTableViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		950C3EC027ECB2250027160D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EC127ECB2310027160D /* Roboto-Bold.ttf */,
+				950C3EC327ECB2310027160D /* Roboto-Light.ttf */,
+				950C3EC227ECB2310027160D /* Roboto-Medium.ttf */,
+				950C3EC427ECB2310027160D /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,8 +398,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950C3EC827ECB2310027160D /* Roboto-Regular.ttf in Resources */,
+				950C3EC627ECB2310027160D /* Roboto-Medium.ttf in Resources */,
 				950C3E7727EB76B80027160D /* LaunchScreen.storyboard in Resources */,
+				950C3EC727ECB2310027160D /* Roboto-Light.ttf in Resources */,
 				950C3E7427EB76B80027160D /* Assets.xcassets in Resources */,
+				950C3EC527ECB2310027160D /* Roboto-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,13 +471,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				950C3EA727EB7F340027160D /* GeneralError.swift in Sources */,
+				950C3EB527ECAFA60027160D /* UIViewController+Extension.swift in Sources */,
 				950C3EA427EB7F0D0027160D /* NetworkManager.swift in Sources */,
+				950C3EBF27ECB1300027160D /* ListViewTableViewCell.swift in Sources */,
 				950C3E6F27EB76B60027160D /* ListViewController.swift in Sources */,
+				950C3EBD27ECB1070027160D /* BaseTableViewCell.swift in Sources */,
 				950C3EB327ECA9650027160D /* BaseErrorModel.swift in Sources */,
 				950C3E6B27EB76B60027160D /* AppDelegate.swift in Sources */,
+				950C3EB727ECAFC90027160D /* UIView+Extension.swift in Sources */,
 				950C3EAF27EC6F060027160D /* OddsAPI.swift in Sources */,
 				950C3EAB27EC427A0027160D /* ListResponseModel.swift in Sources */,
 				950C3E9F27EB78CA0027160D /* ListViewModel.swift in Sources */,
+				950C3EB927ECAFE80027160D /* UIColor+Extension.swift in Sources */,
 				950C3EAD27EC6EF10027160D /* BaseAPI.swift in Sources */,
 				950C3EB127ECA1F00027160D /* OddsResponseModel.swift in Sources */,
 			);
