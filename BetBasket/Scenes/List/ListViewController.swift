@@ -47,6 +47,7 @@ final class ListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        AnalyticsManager.shared.trackScreen(event: .eventList)
         setNavColors(.navColor, textColor: .white)
         title = "Events"
     }
@@ -107,7 +108,9 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(dataSource[indexPath.row].title ?? "")
+        let key = dataSource[indexPath.row].key ?? ""
+        AnalyticsManager.shared.track(event: .eventDetail, param: [.id: key])
+        // TODO: Open eventDetail screen
     }
 }
 

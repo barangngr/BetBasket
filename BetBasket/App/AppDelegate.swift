@@ -20,7 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navVc = UINavigationController(rootViewController: vc)
         window?.rootViewController = navVc
         
+        initAnalytics()
+        
         return true
+    }
+    
+    func initAnalytics() {
+        // AnalyticsManager supports multiple providers.
+        // A protocol-oriented approach was applied.
+        AnalyticsManager.shared.initialize([FirebaseAnalyticsProvider()])
     }
 
 }

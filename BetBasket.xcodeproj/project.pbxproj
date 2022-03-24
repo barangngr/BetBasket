@@ -31,6 +31,11 @@
 		950C3EC627ECB2310027160D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 950C3EC227ECB2310027160D /* Roboto-Medium.ttf */; };
 		950C3EC727ECB2310027160D /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 950C3EC327ECB2310027160D /* Roboto-Light.ttf */; };
 		950C3EC827ECB2310027160D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 950C3EC427ECB2310027160D /* Roboto-Regular.ttf */; };
+		950C3ECC27ECF62A0027160D /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3ECB27ECF62A0027160D /* AnalyticsManager.swift */; };
+		950C3ECE27ECF6510027160D /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3ECD27ECF6510027160D /* AnalyticsEvents.swift */; };
+		950C3ED027ECF6E10027160D /* FirebaseAnalyticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3ECF27ECF6E10027160D /* FirebaseAnalyticsProvider.swift */; };
+		950C3ED227ECF71D0027160D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3ED127ECF71D0027160D /* String+Extension.swift */; };
+		950C3ED427ECF7D80027160D /* AnalyticsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3ED327ECF7D80027160D /* AnalyticsConstants.swift */; };
 		ECCC5BAD4FD2C290D4C27D66 /* Pods_BetBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +86,11 @@
 		950C3EC227ECB2310027160D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		950C3EC327ECB2310027160D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		950C3EC427ECB2310027160D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		950C3ECB27ECF62A0027160D /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		950C3ECD27ECF6510027160D /* AnalyticsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
+		950C3ECF27ECF6E10027160D /* FirebaseAnalyticsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsProvider.swift; sourceTree = "<group>"; };
+		950C3ED127ECF71D0027160D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		950C3ED327ECF7D80027160D /* AnalyticsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsConstants.swift; sourceTree = "<group>"; };
 		A5B91695311908AD72A51524 /* Pods-BetBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetBasket.debug.xcconfig"; path = "Target Support Files/Pods-BetBasket/Pods-BetBasket.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetBasket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -220,6 +230,7 @@
 		950C3EA027EB7B400027160D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				950C3ECA27ECF61B0027160D /* Analytics */,
 				950C3EBB27ECB0FF0027160D /* Base */,
 				950C3EA527EB7F260027160D /* Helpers */,
 				950C3EA227EB7B520027160D /* Network */,
@@ -234,6 +245,7 @@
 				950C3EB427ECAFA60027160D /* UIViewController+Extension.swift */,
 				950C3EB627ECAFC90027160D /* UIView+Extension.swift */,
 				950C3EB827ECAFE80027160D /* UIColor+Extension.swift */,
+				950C3ED127ECF71D0027160D /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,6 +310,17 @@
 			children = (
 			);
 			path = EventDetail;
+			sourceTree = "<group>";
+		};
+		950C3ECA27ECF61B0027160D /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				950C3ECB27ECF62A0027160D /* AnalyticsManager.swift */,
+				950C3ECD27ECF6510027160D /* AnalyticsEvents.swift */,
+				950C3ED327ECF7D80027160D /* AnalyticsConstants.swift */,
+				950C3ECF27ECF6E10027160D /* FirebaseAnalyticsProvider.swift */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,17 +504,22 @@
 				950C3EA727EB7F340027160D /* GeneralError.swift in Sources */,
 				950C3EB527ECAFA60027160D /* UIViewController+Extension.swift in Sources */,
 				950C3EA427EB7F0D0027160D /* NetworkManager.swift in Sources */,
+				950C3ED227ECF71D0027160D /* String+Extension.swift in Sources */,
 				950C3EBF27ECB1300027160D /* ListViewTableViewCell.swift in Sources */,
+				950C3ECC27ECF62A0027160D /* AnalyticsManager.swift in Sources */,
 				950C3E6F27EB76B60027160D /* ListViewController.swift in Sources */,
 				950C3EBD27ECB1070027160D /* BaseTableViewCell.swift in Sources */,
 				950C3EB327ECA9650027160D /* BaseErrorModel.swift in Sources */,
 				950C3E6B27EB76B60027160D /* AppDelegate.swift in Sources */,
 				950C3EB727ECAFC90027160D /* UIView+Extension.swift in Sources */,
+				950C3ED027ECF6E10027160D /* FirebaseAnalyticsProvider.swift in Sources */,
 				950C3EAF27EC6F060027160D /* OddsAPI.swift in Sources */,
 				950C3EAB27EC427A0027160D /* ListResponseModel.swift in Sources */,
 				950C3E9F27EB78CA0027160D /* ListViewModel.swift in Sources */,
 				950C3EB927ECAFE80027160D /* UIColor+Extension.swift in Sources */,
+				950C3ED427ECF7D80027160D /* AnalyticsConstants.swift in Sources */,
 				950C3EAD27EC6EF10027160D /* BaseAPI.swift in Sources */,
+				950C3ECE27ECF6510027160D /* AnalyticsEvents.swift in Sources */,
 				950C3EB127ECA1F00027160D /* OddsResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
