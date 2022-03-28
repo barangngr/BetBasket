@@ -42,15 +42,4 @@ final class ListViewModel {
         }
     }
     
-    //    NetworkManager.shared.sendRequest(model: OddsAPI.odds("soccer_denmark_superliga"), parameters: ["regions": "eu"],
-    //                                      type: [OddsResponseModel].self) { result in
-    //        switch result {
-    //        case .success(let response):
-    //            print(response)
-    //        case .failure(let error):
-    //            print(error)
-    //        }
-    //
-    //    }
-    
 }

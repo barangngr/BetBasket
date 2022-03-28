@@ -108,9 +108,10 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let key = dataSource[indexPath.row].key ?? ""
-        AnalyticsManager.shared.track(event: .eventDetail, param: [.id: key])
-        // TODO: Open eventDetail screen
+        let event = dataSource[indexPath.row]
+        AnalyticsManager.shared.track(event: .eventDetail, param: [.id: event.key ?? ""])
+        let vc = EventDetailViewController(event)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

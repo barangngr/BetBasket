@@ -9,6 +9,26 @@ import UIKit
 
 final class ListViewTableViewCell: BaseTableViewCell {
     
+    private let headerLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .headerColor
+        label.font = UIFont(name: "Roboto-Bold", size: 14)
+        label.textAlignment = .left
+        label.adjustsFontSizeToFitWidth = true
+        return label
+    }()
+    
+    private let descpLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .descpColor
+        label.font = UIFont(name: "Roboto-Medium", size: 11)
+        label.textAlignment = .left
+        label.numberOfLines = 0
+        return label
+    }()
+    
     // MARK: Functions
     override func commonInit() {
         super.commonInit()

@@ -22,4 +22,15 @@ extension String {
         return regex?.stringByReplacingMatches(in: self, options: [], range: range, withTemplate: "$1_$2")
     }
     
+    func toDate() -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        return dateFormatter.date(from: self)
+    }
+    
+    func dateToString(_ format: String) -> String {
+        let date = self.toDate()
+        return date?.toString(format) ?? "*-"
+    }
 }

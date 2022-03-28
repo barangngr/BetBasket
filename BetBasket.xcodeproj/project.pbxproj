@@ -36,6 +36,11 @@
 		950C3ED027ECF6E10027160D /* FirebaseAnalyticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3ECF27ECF6E10027160D /* FirebaseAnalyticsProvider.swift */; };
 		950C3ED227ECF71D0027160D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3ED127ECF71D0027160D /* String+Extension.swift */; };
 		950C3ED427ECF7D80027160D /* AnalyticsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3ED327ECF7D80027160D /* AnalyticsConstants.swift */; };
+		9589E52727F225C60026A2A0 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E52627F225C60026A2A0 /* EventDetailViewController.swift */; };
+		9589E52927F226310026A2A0 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E52827F226310026A2A0 /* EventDetailViewModel.swift */; };
+		9589E52B27F22E820026A2A0 /* OddsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E52A27F22E820026A2A0 /* OddsTableViewCell.swift */; };
+		9589E52D27F2368F0026A2A0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E52C27F2368F0026A2A0 /* Date+Extension.swift */; };
+		9589E52F27F2431A0026A2A0 /* OddsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E52E27F2431A0026A2A0 /* OddsView.swift */; };
 		ECCC5BAD4FD2C290D4C27D66 /* Pods_BetBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +96,11 @@
 		950C3ECF27ECF6E10027160D /* FirebaseAnalyticsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsProvider.swift; sourceTree = "<group>"; };
 		950C3ED127ECF71D0027160D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		950C3ED327ECF7D80027160D /* AnalyticsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsConstants.swift; sourceTree = "<group>"; };
+		9589E52627F225C60026A2A0 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		9589E52827F226310026A2A0 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
+		9589E52A27F22E820026A2A0 /* OddsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsTableViewCell.swift; sourceTree = "<group>"; };
+		9589E52C27F2368F0026A2A0 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		9589E52E27F2431A0026A2A0 /* OddsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsView.swift; sourceTree = "<group>"; };
 		A5B91695311908AD72A51524 /* Pods-BetBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetBasket.debug.xcconfig"; path = "Target Support Files/Pods-BetBasket/Pods-BetBasket.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetBasket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -246,6 +256,7 @@
 				950C3EB627ECAFC90027160D /* UIView+Extension.swift */,
 				950C3EB827ECAFE80027160D /* UIColor+Extension.swift */,
 				950C3ED127ECF71D0027160D /* String+Extension.swift */,
+				9589E52C27F2368F0026A2A0 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -282,6 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				950C3EBE27ECB1300027160D /* ListViewTableViewCell.swift */,
+				9589E52A27F22E820026A2A0 /* OddsTableViewCell.swift */,
+				9589E52E27F2431A0026A2A0 /* OddsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,6 +321,8 @@
 		950C3EC927ECF4E00027160D /* EventDetail */ = {
 			isa = PBXGroup;
 			children = (
+				9589E52627F225C60026A2A0 /* EventDetailViewController.swift */,
+				9589E52827F226310026A2A0 /* EventDetailViewModel.swift */,
 			);
 			path = EventDetail;
 			sourceTree = "<group>";
@@ -506,13 +521,18 @@
 				950C3EA427EB7F0D0027160D /* NetworkManager.swift in Sources */,
 				950C3ED227ECF71D0027160D /* String+Extension.swift in Sources */,
 				950C3EBF27ECB1300027160D /* ListViewTableViewCell.swift in Sources */,
+				9589E52D27F2368F0026A2A0 /* Date+Extension.swift in Sources */,
+				9589E52F27F2431A0026A2A0 /* OddsView.swift in Sources */,
 				950C3ECC27ECF62A0027160D /* AnalyticsManager.swift in Sources */,
+				9589E52927F226310026A2A0 /* EventDetailViewModel.swift in Sources */,
 				950C3E6F27EB76B60027160D /* ListViewController.swift in Sources */,
 				950C3EBD27ECB1070027160D /* BaseTableViewCell.swift in Sources */,
+				9589E52B27F22E820026A2A0 /* OddsTableViewCell.swift in Sources */,
 				950C3EB327ECA9650027160D /* BaseErrorModel.swift in Sources */,
 				950C3E6B27EB76B60027160D /* AppDelegate.swift in Sources */,
 				950C3EB727ECAFC90027160D /* UIView+Extension.swift in Sources */,
 				950C3ED027ECF6E10027160D /* FirebaseAnalyticsProvider.swift in Sources */,
+				9589E52727F225C60026A2A0 /* EventDetailViewController.swift in Sources */,
 				950C3EAF27EC6F060027160D /* OddsAPI.swift in Sources */,
 				950C3EAB27EC427A0027160D /* ListResponseModel.swift in Sources */,
 				950C3E9F27EB78CA0027160D /* ListViewModel.swift in Sources */,
