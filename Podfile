@@ -5,7 +5,6 @@ platform :ios, '11.0'
 target 'BetBasket' do
  
   pod 'Alamofire', '~> 5.5'
-  pod 'SDWebImage', '~> 5.0'
   pod 'Firebase/Analytics'
 
 
