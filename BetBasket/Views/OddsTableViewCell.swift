@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol OddsTableViewCellDelegate: AnyObject {
+    func didSelectOdd(_ model: OddsResponseModel?, odd: Double)
+}
+
 final class OddsTableViewCell: BaseTableViewCell {
     
     // MARK: Properties
@@ -46,6 +50,9 @@ final class OddsTableViewCell: BaseTableViewCell {
         view.spacing = 8
         return view
     }()
+    
+    weak var delegate: OddsTableViewCellDelegate?
+    var model: OddsResponseModel?
         
     // MARK: Functions
     override func commonInit() {
@@ -70,12 +77,13 @@ final class OddsTableViewCell: BaseTableViewCell {
     }
     
     func configure(_ model: OddsResponseModel) {
+        self.model = model
         homeLabel.text = model.homeTeam
         awayLabel.text = model.awayTeam
         timeLabel.text = model.commenceTime?.dateToString("d MMM HH:mm")
 
-        let asd = model.bookmakers?.first?.markets?.first?.outcomes
-        asd?.reversed().enumerated().forEach({
+        let outcomes = model.bookmakers?.first?.markets?.first?.outcomes
+        outcomes?.reversed().enumerated().forEach({
             let oddView = OddsView()
             oddView.delegate = self
             oddView.tag = $0
@@ -83,12 +91,22 @@ final class OddsTableViewCell: BaseTableViewCell {
             oddStack.addArrangedSubview(oddView)
             oddView.configure($1.price)
         })
+        
+        if OddsManager.shared.oddSource.contains(where: { $0.oddModel?.id == model.id }) {
+            oddStack.arrangedSubviews.forEach({
+                let oddsView = ($0 as? OddsView)
+                let selectedOdd = OddsManager.shared.oddSource.filter({ $0.oddModel?.id == model.id }).first?.selectedOdd
+                oddsView?.isSelected = selectedOdd == oddsView?.odd
+            })
+        }
     }
     
 }
 
+// MARK: - Extension
 extension OddsTableViewCell: OddsViewDelegate {
-    func didTapView(_ tag: Int) {
+    func didTapView(_ tag: Int, odd: Double) {
+        delegate?.didSelectOdd(model, odd: odd)
         oddStack.arrangedSubviews.forEach({
             if ($0 as? OddsView)?.tag != tag {
                 ($0 as? OddsView)?.isSelected = false

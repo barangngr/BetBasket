@@ -19,6 +19,12 @@ final class EventDetailViewController: UIViewController {
         return tableView
     }()
     
+    private let basketView: BasketView = {
+        let view = BasketView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private var eventModel: ListResponseModel?
     private var dataSource = [OddsResponseModel]()
     private var viewModel = EventDetailViewModel()
@@ -36,6 +42,7 @@ final class EventDetailViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         viewModel.delegate = self
+        basketView.delegate = self
         
         showActivityIndicator()
         viewModel.fetchOdds(eventModel)
@@ -52,8 +59,13 @@ final class EventDetailViewController: UIViewController {
     
     // MARK: Functions
     private func configureViews() {
-        view.addSubview(views: tableView)
+        view.addSubview(views: tableView, basketView)
         tableView.fill(.all)
+        
+        basketView.heightAnchor.constraint(equalToConstant: 65).isActive = true
+        basketView.widthAnchor.constraint(equalToConstant: 65).isActive = true
+        basketView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        basketView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -35).isActive = true
     }
     
     private func reloadTableView() {
@@ -69,6 +81,7 @@ final class EventDetailViewController: UIViewController {
 extension EventDetailViewController: EventDetailViewModelDelegate {
     func didFetchOdds(_ data: [OddsResponseModel]) {
         dataSource = data
+        basketView.configure()
         reloadTableView()
     }
     
@@ -85,10 +98,22 @@ extension EventDetailViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "oddsTableViewCell", for: indexPath as IndexPath) as! OddsTableViewCell
         cell.configure(dataSource[indexPath.row])
+        cell.delegate = self
         cell.selectionStyle = .none
         return cell
     }
     
 }
 
+extension EventDetailViewController: OddsTableViewCellDelegate {
+    func didSelectOdd(_ model: OddsResponseModel?, odd: Double) {
+        OddsManager.shared.handleOdd(model, odd: odd)
+        basketView.configure()
+    }
+}
 
+extension EventDetailViewController: BasketViewDelegate {
+    func didTapView() {
+        print("123")
+    }
+}

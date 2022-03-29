@@ -8,7 +8,7 @@
 import UIKit
 
 protocol OddsViewDelegate: AnyObject {
-    func didTapView(_ tag: Int)
+    func didTapView(_ tag: Int, odd: Double)
 }
 
 final class OddsView: UIButton {
@@ -31,6 +31,7 @@ final class OddsView: UIButton {
         return view
     }()
     
+    var odd: Double?
     weak var delegate: OddsViewDelegate?
         
     // MARK: Initiliaze
@@ -46,7 +47,7 @@ final class OddsView: UIButton {
     
     override var isSelected: Bool {
         didSet {
-            containerView.backgroundColor = isSelected ? UIColor.blue : UIColor.white
+            containerView.backgroundColor = isSelected ? .selectedColor : .white
             setNeedsDisplay()
         }
     }
@@ -62,17 +63,19 @@ final class OddsView: UIButton {
         oddLabel.widthAnchor.constraint(equalToConstant: 40).isActive = true
         oddLabel.fill(.all, constant: 5)
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(asd))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(oddLabelAction))
         oddLabel.addGestureRecognizer(tap)
     }
     
-    @objc func asd() {
-        delegate?.didTapView(self.tag)
+    @objc func oddLabelAction() {
+        guard let odd = odd else { return }
+        delegate?.didTapView(self.tag, odd: odd)
         isSelected.toggle()
     }
     
     func configure(_ odd: Double?) {
         guard let odd = odd else { return }
+        self.odd = odd
         oddLabel.text = "\(odd)"
     }
 }

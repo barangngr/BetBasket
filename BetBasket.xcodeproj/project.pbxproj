@@ -41,6 +41,9 @@
 		9589E52B27F22E820026A2A0 /* OddsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E52A27F22E820026A2A0 /* OddsTableViewCell.swift */; };
 		9589E52D27F2368F0026A2A0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E52C27F2368F0026A2A0 /* Date+Extension.swift */; };
 		9589E52F27F2431A0026A2A0 /* OddsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E52E27F2431A0026A2A0 /* OddsView.swift */; };
+		9589E53127F2DA2A0026A2A0 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53027F2DA2A0026A2A0 /* BasketView.swift */; };
+		9589E53327F2DE1A0026A2A0 /* OddsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53227F2DE1A0026A2A0 /* OddsManager.swift */; };
+		9589E53527F30F2E0026A2A0 /* NewOddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53427F30F2E0026A2A0 /* NewOddModel.swift */; };
 		ECCC5BAD4FD2C290D4C27D66 /* Pods_BetBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +104,9 @@
 		9589E52A27F22E820026A2A0 /* OddsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsTableViewCell.swift; sourceTree = "<group>"; };
 		9589E52C27F2368F0026A2A0 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		9589E52E27F2431A0026A2A0 /* OddsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsView.swift; sourceTree = "<group>"; };
+		9589E53027F2DA2A0026A2A0 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		9589E53227F2DE1A0026A2A0 /* OddsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsManager.swift; sourceTree = "<group>"; };
+		9589E53427F30F2E0026A2A0 /* NewOddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOddModel.swift; sourceTree = "<group>"; };
 		A5B91695311908AD72A51524 /* Pods-BetBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetBasket.debug.xcconfig"; path = "Target Support Files/Pods-BetBasket/Pods-BetBasket.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetBasket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -275,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				950C3EA627EB7F340027160D /* GeneralError.swift */,
+				9589E53227F2DE1A0026A2A0 /* OddsManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -285,6 +292,7 @@
 				950C3EAA27EC427A0027160D /* ListResponseModel.swift */,
 				950C3EB027ECA1F00027160D /* OddsResponseModel.swift */,
 				950C3EB227ECA9650027160D /* BaseErrorModel.swift */,
+				9589E53427F30F2E0026A2A0 /* NewOddModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,6 +303,7 @@
 				950C3EBE27ECB1300027160D /* ListViewTableViewCell.swift */,
 				9589E52A27F22E820026A2A0 /* OddsTableViewCell.swift */,
 				9589E52E27F2431A0026A2A0 /* OddsView.swift */,
+				9589E53027F2DA2A0026A2A0 /* BasketView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -518,8 +527,10 @@
 			files = (
 				950C3EA727EB7F340027160D /* GeneralError.swift in Sources */,
 				950C3EB527ECAFA60027160D /* UIViewController+Extension.swift in Sources */,
+				9589E53127F2DA2A0026A2A0 /* BasketView.swift in Sources */,
 				950C3EA427EB7F0D0027160D /* NetworkManager.swift in Sources */,
 				950C3ED227ECF71D0027160D /* String+Extension.swift in Sources */,
+				9589E53327F2DE1A0026A2A0 /* OddsManager.swift in Sources */,
 				950C3EBF27ECB1300027160D /* ListViewTableViewCell.swift in Sources */,
 				9589E52D27F2368F0026A2A0 /* Date+Extension.swift in Sources */,
 				9589E52F27F2431A0026A2A0 /* OddsView.swift in Sources */,
@@ -540,6 +551,7 @@
 				950C3ED427ECF7D80027160D /* AnalyticsConstants.swift in Sources */,
 				950C3EAD27EC6EF10027160D /* BaseAPI.swift in Sources */,
 				950C3ECE27ECF6510027160D /* AnalyticsEvents.swift in Sources */,
+				9589E53527F30F2E0026A2A0 /* NewOddModel.swift in Sources */,
 				950C3EB127ECA1F00027160D /* OddsResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

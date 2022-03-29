@@ -16,5 +16,8 @@ extension UIColor {
     static let headerColor = #colorLiteral(red: 0.7921568627, green: 0.8196078431, blue: 0.8470588235, alpha: 1)
     static let descpColor = #colorLiteral(red: 0.4862745098, green: 0.5098039216, blue: 0.5411764706, alpha: 1)
     
+    static let selectedColor = #colorLiteral(red: 0.2588235294, green: 0.5843137255, blue: 0.2705882353, alpha: 1)
+    static let basketColor = #colorLiteral(red: 0.9475112557, green: 0.06939077377, blue: 0, alpha: 1)
+    
 }
 
