@@ -5,7 +5,7 @@
 //  Created by Baran Gungor on 24.03.2022.
 //
 
-//import FirebaseAnalytics
+import FirebaseAnalytics
 
 final class FirebaseAnalyticsProvider: AnalyticsProvider {
    
@@ -25,13 +25,13 @@ final class FirebaseAnalyticsProvider: AnalyticsProvider {
     }
     
     func track(event: AnalyticsEvent, param: AnalyticsParams) {
-//        Analytics.logEvent(event.value, parameters: map(param))
-//        Log.trackEvent("Firebase: \(event.value) \(map(param) ?? [:])")
+        Analytics.logEvent(event.value, parameters: map(param))
+        print("🚀FirebaseEvent: \(event.value) \(map(param) ?? [:])")
     }
 
     func trackScreen(event: AnalyticsScreenEvent) {
-//        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: event.rawValue])
-//        Log.trackScreenEvent(event.rawValue)
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: event.rawValue])
+        print("🚀FirebaseScreenEvent: \(event.rawValue)")
     }
     
 }

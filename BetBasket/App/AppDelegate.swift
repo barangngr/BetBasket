@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,9 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navVc = UINavigationController(rootViewController: vc)
         window?.rootViewController = navVc
         
+        initFirebase()
         initAnalytics()
         
         return true
+    }
+    
+    func initFirebase() {
+        FirebaseApp.configure()
     }
     
     func initAnalytics() {

@@ -46,6 +46,7 @@
 		9589E53527F30F2E0026A2A0 /* NewOddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53427F30F2E0026A2A0 /* NewOddModel.swift */; };
 		9589E53827F315C60026A2A0 /* CartListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53727F315C60026A2A0 /* CartListViewController.swift */; };
 		9589E53A27F33E1A0026A2A0 /* WinnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53927F33E1A0026A2A0 /* WinnerTableViewCell.swift */; };
+		9589E53C27F396D80026A2A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9589E53B27F396D80026A2A0 /* GoogleService-Info.plist */; };
 		ECCC5BAD4FD2C290D4C27D66 /* Pods_BetBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		9589E53427F30F2E0026A2A0 /* NewOddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOddModel.swift; sourceTree = "<group>"; };
 		9589E53727F315C60026A2A0 /* CartListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListViewController.swift; sourceTree = "<group>"; };
 		9589E53927F33E1A0026A2A0 /* WinnerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerTableViewCell.swift; sourceTree = "<group>"; };
+		9589E53B27F396D80026A2A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A5B91695311908AD72A51524 /* Pods-BetBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetBasket.debug.xcconfig"; path = "Target Support Files/Pods-BetBasket/Pods-BetBasket.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetBasket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -183,6 +185,7 @@
 		950C3E6927EB76B60027160D /* BetBasket */ = {
 			isa = PBXGroup;
 			children = (
+				9589E53B27F396D80026A2A0 /* GoogleService-Info.plist */,
 				950C3E9A27EB77A10027160D /* App */,
 				950C3E7827EB76B80027160D /* Info.plist */,
 				950C3E9C27EB77CC0027160D /* Resources */,
@@ -473,6 +476,7 @@
 				950C3EC727ECB2310027160D /* Roboto-Light.ttf in Resources */,
 				950C3E7427EB76B80027160D /* Assets.xcassets in Resources */,
 				950C3EC527ECB2310027160D /* Roboto-Bold.ttf in Resources */,
+				9589E53C27F396D80026A2A0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
