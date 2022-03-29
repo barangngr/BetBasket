@@ -13,6 +13,7 @@ final class EventDetailViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(OddsTableViewCell.self, forCellReuseIdentifier: "oddsTableViewCell")
+        tableView.register(WinnerTableViewCell.self, forCellReuseIdentifier: "winnerTableViewCell")
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.contentInset.top = 5
@@ -96,6 +97,14 @@ extension EventDetailViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if eventModel?.hasOutrights ?? false {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "winnerTableViewCell", for: indexPath as IndexPath) as! WinnerTableViewCell
+            cell.configure(dataSource[indexPath.row])
+            cell.delegate = self
+            cell.selectionStyle = .none
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "oddsTableViewCell", for: indexPath as IndexPath) as! OddsTableViewCell
         cell.configure(dataSource[indexPath.row])
         cell.delegate = self

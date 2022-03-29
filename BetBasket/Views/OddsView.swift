@@ -11,10 +11,10 @@ protocol OddsViewDelegate: AnyObject {
     func didTapView(_ tag: Int, odd: Double)
 }
 
-final class OddsView: UIButton {
+class OddsView: UIButton {
 
     // MARK: Properties
-    private let oddLabel: UILabel = {
+    fileprivate let oddLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .backColor
@@ -24,7 +24,7 @@ final class OddsView: UIButton {
         return label
     }()
     
-    private let containerView: UIView = {
+    fileprivate let containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 10
@@ -53,7 +53,7 @@ final class OddsView: UIButton {
     }
     
     // MARK: Functions
-    private func commonInit() {
+    fileprivate func commonInit() {
         backgroundColor = .clear
         addSubview(views: containerView)
         containerView.fill(.all)
@@ -77,5 +77,47 @@ final class OddsView: UIButton {
         guard let odd = odd else { return }
         self.odd = odd
         oddLabel.text = "\(odd)"
+    }
+}
+
+// MARK: - WinnerOddView
+class WinnerOddView: OddsView {
+    
+    // MARK: Properties
+    fileprivate let teamLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .headerColor
+        label.font = UIFont(name: "Roboto-Bold", size: 14)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    // MARK: Functions
+    override func commonInit() {
+        backgroundColor = .clear
+        addSubview(views: teamLabel, containerView)
+        
+        teamLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+        teamLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+        teamLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        
+        containerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15).isActive = true
+        containerView.fill(.vertical, constant: 5)
+        
+        containerView.addSubview(oddLabel)
+        oddLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        oddLabel.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        oddLabel.fill(.all, constant: 5)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(oddLabelAction))
+        oddLabel.addGestureRecognizer(tap)
+    }
+    
+    func configure(_ model: OutcomeModel?) {
+        guard let model = model, let price = model.price else { return }
+        self.odd = price
+        teamLabel.text = model.name
+        oddLabel.text = "\(price)"
     }
 }

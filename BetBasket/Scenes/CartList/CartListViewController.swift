@@ -13,6 +13,7 @@ final class CartListViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(OddsTableViewCell.self, forCellReuseIdentifier: "oddsTableViewCell")
+        tableView.register(WinnerTableViewCell.self, forCellReuseIdentifier: "winnerTableViewCell")
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.contentInset.top = 5
@@ -65,12 +66,21 @@ extension CartListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "oddsTableViewCell", for: indexPath as IndexPath) as! OddsTableViewCell
-        cell.configure(dataSource[indexPath.row].oddModel)
-        cell.selectionStyle = .none
-        cell.contentView.isUserInteractionEnabled = false
-        // It was intentionally closed because there was no time to build a more complex structure.
-        return cell
+        // It was intentionally closed (contentView.isUserInteractionEnabled) because there was no time to build a more complex structure.
+
+        if dataSource[indexPath.row].oddModel?.homeTeam != nil {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "oddsTableViewCell", for: indexPath as IndexPath) as! OddsTableViewCell
+            cell.configure(dataSource[indexPath.row].oddModel)
+            cell.selectionStyle = .none
+            cell.contentView.isUserInteractionEnabled = false
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "winnerTableViewCell", for: indexPath as IndexPath) as! WinnerTableViewCell
+            cell.configure(dataSource[indexPath.row].oddModel)
+            cell.selectionStyle = .none
+            cell.contentView.isUserInteractionEnabled = false
+            return cell
+        }
     }
     
 }

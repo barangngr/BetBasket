@@ -45,6 +45,7 @@
 		9589E53327F2DE1A0026A2A0 /* OddsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53227F2DE1A0026A2A0 /* OddsManager.swift */; };
 		9589E53527F30F2E0026A2A0 /* NewOddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53427F30F2E0026A2A0 /* NewOddModel.swift */; };
 		9589E53827F315C60026A2A0 /* CartListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53727F315C60026A2A0 /* CartListViewController.swift */; };
+		9589E53A27F33E1A0026A2A0 /* WinnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53927F33E1A0026A2A0 /* WinnerTableViewCell.swift */; };
 		ECCC5BAD4FD2C290D4C27D66 /* Pods_BetBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		9589E53227F2DE1A0026A2A0 /* OddsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsManager.swift; sourceTree = "<group>"; };
 		9589E53427F30F2E0026A2A0 /* NewOddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOddModel.swift; sourceTree = "<group>"; };
 		9589E53727F315C60026A2A0 /* CartListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListViewController.swift; sourceTree = "<group>"; };
+		9589E53927F33E1A0026A2A0 /* WinnerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerTableViewCell.swift; sourceTree = "<group>"; };
 		A5B91695311908AD72A51524 /* Pods-BetBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetBasket.debug.xcconfig"; path = "Target Support Files/Pods-BetBasket/Pods-BetBasket.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetBasket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -307,6 +309,7 @@
 				9589E52A27F22E820026A2A0 /* OddsTableViewCell.swift */,
 				9589E52E27F2431A0026A2A0 /* OddsView.swift */,
 				9589E53027F2DA2A0026A2A0 /* BasketView.swift */,
+				9589E53927F33E1A0026A2A0 /* WinnerTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				9589E52F27F2431A0026A2A0 /* OddsView.swift in Sources */,
 				950C3ECC27ECF62A0027160D /* AnalyticsManager.swift in Sources */,
 				9589E52927F226310026A2A0 /* EventDetailViewModel.swift in Sources */,
+				9589E53A27F33E1A0026A2A0 /* WinnerTableViewCell.swift in Sources */,
 				950C3E6F27EB76B60027160D /* ListViewController.swift in Sources */,
 				950C3EBD27ECB1070027160D /* BaseTableViewCell.swift in Sources */,
 				9589E52B27F22E820026A2A0 /* OddsTableViewCell.swift in Sources */,
