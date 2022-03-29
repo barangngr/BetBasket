@@ -53,7 +53,7 @@ final class OddsTableViewCell: BaseTableViewCell {
     
     weak var delegate: OddsTableViewCellDelegate?
     var model: OddsResponseModel?
-        
+    
     // MARK: Functions
     override func commonInit() {
         super.commonInit()
@@ -81,7 +81,9 @@ final class OddsTableViewCell: BaseTableViewCell {
         homeLabel.text = model.homeTeam
         awayLabel.text = model.awayTeam
         timeLabel.text = model.commenceTime?.dateToString("d MMM HH:mm")
-
+        
+        oddStack.subviews.forEach({$0.removeFromSuperview()})
+        
         let outcomes = model.bookmakers?.first?.markets?.first?.outcomes
         outcomes?.reversed().enumerated().forEach({
             let oddView = OddsView()

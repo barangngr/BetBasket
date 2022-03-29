@@ -40,6 +40,7 @@ final class ListViewController: UIViewController {
         searchView.delegate = self
         viewModel.delegate = self
         
+        hideKeyboardWhenTappedAround()
         showActivityIndicator()
         viewModel.fetchEvents()
         configureViews()
@@ -112,6 +113,10 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
         AnalyticsManager.shared.track(event: .eventDetail, param: [.id: event.key ?? ""])
         let vc = EventDetailViewController(event)
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        view.endEditing(true)
     }
 }
 
