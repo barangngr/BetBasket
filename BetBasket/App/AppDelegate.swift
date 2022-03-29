@@ -38,3 +38,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+//Removed because SDWebImage library is not used.
