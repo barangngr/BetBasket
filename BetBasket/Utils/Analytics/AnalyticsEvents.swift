@@ -11,6 +11,7 @@ import Foundation
 enum AnalyticsScreenEvent: String {
     case eventList
     case eventDetail
+    case cartList
 }
 
 // MARK: AnalyticsEvent

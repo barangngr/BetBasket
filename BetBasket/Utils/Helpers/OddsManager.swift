@@ -37,11 +37,15 @@ final class OddsManager {
     private func addOdd(_ model: NewOddModel) {
         oddSource.append(model)
         totalOdd *= model.selectedOdd
+        AnalyticsManager.shared.track(event: .addCart, param: [.id: model.oddModel?.id ?? "*-",
+                                                               .amount: model.selectedOdd])
     }
     
     private func removeOdd(_ model: OddsResponseModel, odd: Double) {
         oddSource = oddSource.filter({$0.oddModel?.id != model.id})
         totalOdd /= odd
+        AnalyticsManager.shared.track(event: .removeCart, param: [.id: model.id ?? "*-",
+                                                                  .amount: odd])
     }
     
     private func changeOdd(_ model: NewOddModel, odd: Double) {

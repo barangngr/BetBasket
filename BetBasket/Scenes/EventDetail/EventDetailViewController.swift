@@ -114,6 +114,7 @@ extension EventDetailViewController: OddsTableViewCellDelegate {
 
 extension EventDetailViewController: BasketViewDelegate {
     func didTapView() {
-        print("123")
+        let vc = CartListViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

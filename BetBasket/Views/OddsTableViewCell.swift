@@ -76,7 +76,8 @@ final class OddsTableViewCell: BaseTableViewCell {
         oddStack.topAnchor.constraint(equalTo: homeLabel.bottomAnchor, constant: -5).isActive = true
     }
     
-    func configure(_ model: OddsResponseModel) {
+    func configure(_ model: OddsResponseModel?) {
+        guard let model = model else { return }
         self.model = model
         homeLabel.text = model.homeTeam
         awayLabel.text = model.awayTeam

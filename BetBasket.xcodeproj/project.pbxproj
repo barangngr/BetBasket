@@ -44,6 +44,7 @@
 		9589E53127F2DA2A0026A2A0 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53027F2DA2A0026A2A0 /* BasketView.swift */; };
 		9589E53327F2DE1A0026A2A0 /* OddsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53227F2DE1A0026A2A0 /* OddsManager.swift */; };
 		9589E53527F30F2E0026A2A0 /* NewOddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53427F30F2E0026A2A0 /* NewOddModel.swift */; };
+		9589E53827F315C60026A2A0 /* CartListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53727F315C60026A2A0 /* CartListViewController.swift */; };
 		ECCC5BAD4FD2C290D4C27D66 /* Pods_BetBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		9589E53027F2DA2A0026A2A0 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		9589E53227F2DE1A0026A2A0 /* OddsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsManager.swift; sourceTree = "<group>"; };
 		9589E53427F30F2E0026A2A0 /* NewOddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOddModel.swift; sourceTree = "<group>"; };
+		9589E53727F315C60026A2A0 /* CartListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListViewController.swift; sourceTree = "<group>"; };
 		A5B91695311908AD72A51524 /* Pods-BetBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetBasket.debug.xcconfig"; path = "Target Support Files/Pods-BetBasket/Pods-BetBasket.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetBasket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -221,6 +223,7 @@
 				950C3E7527EB76B80027160D /* LaunchScreen.storyboard */,
 				950C3E9D27EB78B00027160D /* List */,
 				950C3EC927ECF4E00027160D /* EventDetail */,
+				9589E53627F3157B0026A2A0 /* CartList */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -345,6 +348,14 @@
 				950C3ECF27ECF6E10027160D /* FirebaseAnalyticsProvider.swift */,
 			);
 			path = Analytics;
+			sourceTree = "<group>";
+		};
+		9589E53627F3157B0026A2A0 /* CartList */ = {
+			isa = PBXGroup;
+			children = (
+				9589E53727F315C60026A2A0 /* CartListViewController.swift */,
+			);
+			path = CartList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,6 +543,7 @@
 				950C3ED227ECF71D0027160D /* String+Extension.swift in Sources */,
 				9589E53327F2DE1A0026A2A0 /* OddsManager.swift in Sources */,
 				950C3EBF27ECB1300027160D /* ListViewTableViewCell.swift in Sources */,
+				9589E53827F315C60026A2A0 /* CartListViewController.swift in Sources */,
 				9589E52D27F2368F0026A2A0 /* Date+Extension.swift in Sources */,
 				9589E52F27F2431A0026A2A0 /* OddsView.swift in Sources */,
 				950C3ECC27ECF62A0027160D /* AnalyticsManager.swift in Sources */,
