@@ -1,0 +1,933 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		950C3E6B27EB76B60027160D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E6A27EB76B60027160D /* AppDelegate.swift */; };
+		950C3E6F27EB76B60027160D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E6E27EB76B60027160D /* ListViewController.swift */; };
+		950C3E7427EB76B80027160D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950C3E7327EB76B80027160D /* Assets.xcassets */; };
+		950C3E7727EB76B80027160D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950C3E7527EB76B80027160D /* LaunchScreen.storyboard */; };
+		950C3E8227EB76B80027160D /* BetBasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E8127EB76B80027160D /* BetBasketTests.swift */; };
+		950C3E8C27EB76B80027160D /* BetBasketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E8B27EB76B80027160D /* BetBasketUITests.swift */; };
+		950C3E8E27EB76B80027160D /* BetBasketUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E8D27EB76B80027160D /* BetBasketUITestsLaunchTests.swift */; };
+		950C3E9F27EB78CA0027160D /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3E9E27EB78CA0027160D /* ListViewModel.swift */; };
+		950C3EA427EB7F0D0027160D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EA327EB7F0D0027160D /* NetworkManager.swift */; };
+		950C3EA727EB7F340027160D /* GeneralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EA627EB7F340027160D /* GeneralError.swift */; };
+		950C3EAB27EC427A0027160D /* ListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EAA27EC427A0027160D /* ListResponseModel.swift */; };
+		950C3EAD27EC6EF10027160D /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EAC27EC6EF10027160D /* BaseAPI.swift */; };
+		950C3EAF27EC6F060027160D /* OddsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EAE27EC6F060027160D /* OddsAPI.swift */; };
+		950C3EB127ECA1F00027160D /* OddsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EB027ECA1F00027160D /* OddsResponseModel.swift */; };
+		950C3EB327ECA9650027160D /* BaseErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EB227ECA9650027160D /* BaseErrorModel.swift */; };
+		950C3EB527ECAFA60027160D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EB427ECAFA60027160D /* UIViewController+Extension.swift */; };
+		950C3EB727ECAFC90027160D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EB627ECAFC90027160D /* UIView+Extension.swift */; };
+		950C3EB927ECAFE80027160D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EB827ECAFE80027160D /* UIColor+Extension.swift */; };
+		950C3EBD27ECB1070027160D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EBC27ECB1070027160D /* BaseTableViewCell.swift */; };
+		950C3EBF27ECB1300027160D /* ListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3EBE27ECB1300027160D /* ListViewTableViewCell.swift */; };
+		950C3EC527ECB2310027160D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 950C3EC127ECB2310027160D /* Roboto-Bold.ttf */; };
+		950C3EC627ECB2310027160D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 950C3EC227ECB2310027160D /* Roboto-Medium.ttf */; };
+		950C3EC727ECB2310027160D /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 950C3EC327ECB2310027160D /* Roboto-Light.ttf */; };
+		950C3EC827ECB2310027160D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 950C3EC427ECB2310027160D /* Roboto-Regular.ttf */; };
+		950C3ECC27ECF62A0027160D /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3ECB27ECF62A0027160D /* AnalyticsManager.swift */; };
+		950C3ECE27ECF6510027160D /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3ECD27ECF6510027160D /* AnalyticsEvents.swift */; };
+		950C3ED027ECF6E10027160D /* FirebaseAnalyticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3ECF27ECF6E10027160D /* FirebaseAnalyticsProvider.swift */; };
+		950C3ED227ECF71D0027160D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3ED127ECF71D0027160D /* String+Extension.swift */; };
+		950C3ED427ECF7D80027160D /* AnalyticsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C3ED327ECF7D80027160D /* AnalyticsConstants.swift */; };
+		9589E52727F225C60026A2A0 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E52627F225C60026A2A0 /* EventDetailViewController.swift */; };
+		9589E52927F226310026A2A0 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E52827F226310026A2A0 /* EventDetailViewModel.swift */; };
+		9589E52B27F22E820026A2A0 /* OddsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E52A27F22E820026A2A0 /* OddsTableViewCell.swift */; };
+		9589E52D27F2368F0026A2A0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E52C27F2368F0026A2A0 /* Date+Extension.swift */; };
+		9589E52F27F2431A0026A2A0 /* OddsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E52E27F2431A0026A2A0 /* OddsView.swift */; };
+		9589E53127F2DA2A0026A2A0 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53027F2DA2A0026A2A0 /* BasketView.swift */; };
+		9589E53327F2DE1A0026A2A0 /* OddsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53227F2DE1A0026A2A0 /* OddsManager.swift */; };
+		9589E53527F30F2E0026A2A0 /* NewOddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53427F30F2E0026A2A0 /* NewOddModel.swift */; };
+		9589E53827F315C60026A2A0 /* CartListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53727F315C60026A2A0 /* CartListViewController.swift */; };
+		9589E53A27F33E1A0026A2A0 /* WinnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E53927F33E1A0026A2A0 /* WinnerTableViewCell.swift */; };
+		9589E53C27F396D80026A2A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9589E53B27F396D80026A2A0 /* GoogleService-Info.plist */; };
+		ECCC5BAD4FD2C290D4C27D66 /* Pods_BetBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		950C3E7E27EB76B80027160D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 950C3E5F27EB76B60027160D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 950C3E6627EB76B60027160D;
+			remoteInfo = BetBasket;
+		};
+		950C3E8827EB76B80027160D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 950C3E5F27EB76B60027160D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 950C3E6627EB76B60027160D;
+			remoteInfo = BetBasket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		78D9280AE274B70FD968EC79 /* Pods-BetBasket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetBasket.release.xcconfig"; path = "Target Support Files/Pods-BetBasket/Pods-BetBasket.release.xcconfig"; sourceTree = "<group>"; };
+		950C3E6727EB76B60027160D /* BetBasket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetBasket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		950C3E6A27EB76B60027160D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		950C3E6E27EB76B60027160D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		950C3E7327EB76B80027160D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		950C3E7627EB76B80027160D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		950C3E7827EB76B80027160D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950C3E7D27EB76B80027160D /* BetBasketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetBasketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		950C3E8127EB76B80027160D /* BetBasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetBasketTests.swift; sourceTree = "<group>"; };
+		950C3E8727EB76B80027160D /* BetBasketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetBasketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		950C3E8B27EB76B80027160D /* BetBasketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetBasketUITests.swift; sourceTree = "<group>"; };
+		950C3E8D27EB76B80027160D /* BetBasketUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetBasketUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		950C3E9E27EB78CA0027160D /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		950C3EA327EB7F0D0027160D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		950C3EA627EB7F340027160D /* GeneralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralError.swift; sourceTree = "<group>"; };
+		950C3EAA27EC427A0027160D /* ListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponseModel.swift; sourceTree = "<group>"; };
+		950C3EAC27EC6EF10027160D /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		950C3EAE27EC6F060027160D /* OddsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsAPI.swift; sourceTree = "<group>"; };
+		950C3EB027ECA1F00027160D /* OddsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsResponseModel.swift; sourceTree = "<group>"; };
+		950C3EB227ECA9650027160D /* BaseErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseErrorModel.swift; sourceTree = "<group>"; };
+		950C3EB427ECAFA60027160D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		950C3EB627ECAFC90027160D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		950C3EB827ECAFE80027160D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		950C3EBC27ECB1070027160D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		950C3EBE27ECB1300027160D /* ListViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTableViewCell.swift; sourceTree = "<group>"; };
+		950C3EC127ECB2310027160D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		950C3EC227ECB2310027160D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		950C3EC327ECB2310027160D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		950C3EC427ECB2310027160D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		950C3ECB27ECF62A0027160D /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		950C3ECD27ECF6510027160D /* AnalyticsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
+		950C3ECF27ECF6E10027160D /* FirebaseAnalyticsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsProvider.swift; sourceTree = "<group>"; };
+		950C3ED127ECF71D0027160D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		950C3ED327ECF7D80027160D /* AnalyticsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsConstants.swift; sourceTree = "<group>"; };
+		9589E52627F225C60026A2A0 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		9589E52827F226310026A2A0 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
+		9589E52A27F22E820026A2A0 /* OddsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsTableViewCell.swift; sourceTree = "<group>"; };
+		9589E52C27F2368F0026A2A0 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		9589E52E27F2431A0026A2A0 /* OddsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsView.swift; sourceTree = "<group>"; };
+		9589E53027F2DA2A0026A2A0 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		9589E53227F2DE1A0026A2A0 /* OddsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsManager.swift; sourceTree = "<group>"; };
+		9589E53427F30F2E0026A2A0 /* NewOddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOddModel.swift; sourceTree = "<group>"; };
+		9589E53727F315C60026A2A0 /* CartListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListViewController.swift; sourceTree = "<group>"; };
+		9589E53927F33E1A0026A2A0 /* WinnerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerTableViewCell.swift; sourceTree = "<group>"; };
+		9589E53B27F396D80026A2A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A5B91695311908AD72A51524 /* Pods-BetBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetBasket.debug.xcconfig"; path = "Target Support Files/Pods-BetBasket/Pods-BetBasket.debug.xcconfig"; sourceTree = "<group>"; };
+		AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetBasket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		950C3E6427EB76B60027160D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECCC5BAD4FD2C290D4C27D66 /* Pods_BetBasket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950C3E7A27EB76B80027160D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950C3E8427EB76B80027160D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56EB7287276B2EF84C3402D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5B91695311908AD72A51524 /* Pods-BetBasket.debug.xcconfig */,
+				78D9280AE274B70FD968EC79 /* Pods-BetBasket.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8BC39B4851DC035EDB503015 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEA8D506ECB798A33CEC36A3 /* Pods_BetBasket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		950C3E5E27EB76B60027160D = {
+			isa = PBXGroup;
+			children = (
+				950C3E6927EB76B60027160D /* BetBasket */,
+				950C3E8027EB76B80027160D /* BetBasketTests */,
+				950C3E8A27EB76B80027160D /* BetBasketUITests */,
+				950C3E6827EB76B60027160D /* Products */,
+				56EB7287276B2EF84C3402D3 /* Pods */,
+				8BC39B4851DC035EDB503015 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		950C3E6827EB76B60027160D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				950C3E6727EB76B60027160D /* BetBasket.app */,
+				950C3E7D27EB76B80027160D /* BetBasketTests.xctest */,
+				950C3E8727EB76B80027160D /* BetBasketUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		950C3E6927EB76B60027160D /* BetBasket */ = {
+			isa = PBXGroup;
+			children = (
+				9589E53B27F396D80026A2A0 /* GoogleService-Info.plist */,
+				950C3E9A27EB77A10027160D /* App */,
+				950C3E7827EB76B80027160D /* Info.plist */,
+				950C3E9C27EB77CC0027160D /* Resources */,
+				950C3E9B27EB77B10027160D /* Scenes */,
+				950C3EA927EC42660027160D /* Models */,
+				950C3EBA27ECB0D70027160D /* Views */,
+				950C3EA027EB7B400027160D /* Utils */,
+			);
+			path = BetBasket;
+			sourceTree = "<group>";
+		};
+		950C3E8027EB76B80027160D /* BetBasketTests */ = {
+			isa = PBXGroup;
+			children = (
+				950C3E8127EB76B80027160D /* BetBasketTests.swift */,
+			);
+			path = BetBasketTests;
+			sourceTree = "<group>";
+		};
+		950C3E8A27EB76B80027160D /* BetBasketUITests */ = {
+			isa = PBXGroup;
+			children = (
+				950C3E8B27EB76B80027160D /* BetBasketUITests.swift */,
+				950C3E8D27EB76B80027160D /* BetBasketUITestsLaunchTests.swift */,
+			);
+			path = BetBasketUITests;
+			sourceTree = "<group>";
+		};
+		950C3E9A27EB77A10027160D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				950C3E6A27EB76B60027160D /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		950C3E9B27EB77B10027160D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				950C3E7527EB76B80027160D /* LaunchScreen.storyboard */,
+				950C3E9D27EB78B00027160D /* List */,
+				950C3EC927ECF4E00027160D /* EventDetail */,
+				9589E53627F3157B0026A2A0 /* CartList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		950C3E9C27EB77CC0027160D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EC027ECB2250027160D /* Fonts */,
+				950C3E7327EB76B80027160D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		950C3E9D27EB78B00027160D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				950C3E6E27EB76B60027160D /* ListViewController.swift */,
+				950C3E9E27EB78CA0027160D /* ListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		950C3EA027EB7B400027160D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				950C3ECA27ECF61B0027160D /* Analytics */,
+				950C3EBB27ECB0FF0027160D /* Base */,
+				950C3EA527EB7F260027160D /* Helpers */,
+				950C3EA227EB7B520027160D /* Network */,
+				950C3EA127EB7B4C0027160D /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		950C3EA127EB7B4C0027160D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EB427ECAFA60027160D /* UIViewController+Extension.swift */,
+				950C3EB627ECAFC90027160D /* UIView+Extension.swift */,
+				950C3EB827ECAFE80027160D /* UIColor+Extension.swift */,
+				950C3ED127ECF71D0027160D /* String+Extension.swift */,
+				9589E52C27F2368F0026A2A0 /* Date+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		950C3EA227EB7B520027160D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EA327EB7F0D0027160D /* NetworkManager.swift */,
+				950C3EAC27EC6EF10027160D /* BaseAPI.swift */,
+				950C3EAE27EC6F060027160D /* OddsAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		950C3EA527EB7F260027160D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EA627EB7F340027160D /* GeneralError.swift */,
+				9589E53227F2DE1A0026A2A0 /* OddsManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		950C3EA927EC42660027160D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EAA27EC427A0027160D /* ListResponseModel.swift */,
+				950C3EB027ECA1F00027160D /* OddsResponseModel.swift */,
+				950C3EB227ECA9650027160D /* BaseErrorModel.swift */,
+				9589E53427F30F2E0026A2A0 /* NewOddModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		950C3EBA27ECB0D70027160D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EBE27ECB1300027160D /* ListViewTableViewCell.swift */,
+				9589E52A27F22E820026A2A0 /* OddsTableViewCell.swift */,
+				9589E52E27F2431A0026A2A0 /* OddsView.swift */,
+				9589E53027F2DA2A0026A2A0 /* BasketView.swift */,
+				9589E53927F33E1A0026A2A0 /* WinnerTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		950C3EBB27ECB0FF0027160D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EBC27ECB1070027160D /* BaseTableViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		950C3EC027ECB2250027160D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				950C3EC127ECB2310027160D /* Roboto-Bold.ttf */,
+				950C3EC327ECB2310027160D /* Roboto-Light.ttf */,
+				950C3EC227ECB2310027160D /* Roboto-Medium.ttf */,
+				950C3EC427ECB2310027160D /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		950C3EC927ECF4E00027160D /* EventDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9589E52627F225C60026A2A0 /* EventDetailViewController.swift */,
+				9589E52827F226310026A2A0 /* EventDetailViewModel.swift */,
+			);
+			path = EventDetail;
+			sourceTree = "<group>";
+		};
+		950C3ECA27ECF61B0027160D /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				950C3ECB27ECF62A0027160D /* AnalyticsManager.swift */,
+				950C3ECD27ECF6510027160D /* AnalyticsEvents.swift */,
+				950C3ED327ECF7D80027160D /* AnalyticsConstants.swift */,
+				950C3ECF27ECF6E10027160D /* FirebaseAnalyticsProvider.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		9589E53627F3157B0026A2A0 /* CartList */ = {
+			isa = PBXGroup;
+			children = (
+				9589E53727F315C60026A2A0 /* CartListViewController.swift */,
+			);
+			path = CartList;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		950C3E6627EB76B60027160D /* BetBasket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950C3E9127EB76B80027160D /* Build configuration list for PBXNativeTarget "BetBasket" */;
+			buildPhases = (
+				78B09BF542BBA06DBC625A2C /* [CP] Check Pods Manifest.lock */,
+				950C3E6327EB76B60027160D /* Sources */,
+				950C3E6427EB76B60027160D /* Frameworks */,
+				950C3E6527EB76B60027160D /* Resources */,
+				CA9D4681CC22992DDA050B56 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetBasket;
+			productName = BetBasket;
+			productReference = 950C3E6727EB76B60027160D /* BetBasket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		950C3E7C27EB76B80027160D /* BetBasketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950C3E9427EB76B80027160D /* Build configuration list for PBXNativeTarget "BetBasketTests" */;
+			buildPhases = (
+				950C3E7927EB76B80027160D /* Sources */,
+				950C3E7A27EB76B80027160D /* Frameworks */,
+				950C3E7B27EB76B80027160D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				950C3E7F27EB76B80027160D /* PBXTargetDependency */,
+			);
+			name = BetBasketTests;
+			productName = BetBasketTests;
+			productReference = 950C3E7D27EB76B80027160D /* BetBasketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		950C3E8627EB76B80027160D /* BetBasketUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950C3E9727EB76B80027160D /* Build configuration list for PBXNativeTarget "BetBasketUITests" */;
+			buildPhases = (
+				950C3E8327EB76B80027160D /* Sources */,
+				950C3E8427EB76B80027160D /* Frameworks */,
+				950C3E8527EB76B80027160D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				950C3E8927EB76B80027160D /* PBXTargetDependency */,
+			);
+			name = BetBasketUITests;
+			productName = BetBasketUITests;
+			productReference = 950C3E8727EB76B80027160D /* BetBasketUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		950C3E5F27EB76B60027160D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					950C3E6627EB76B60027160D = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					950C3E7C27EB76B80027160D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 950C3E6627EB76B60027160D;
+					};
+					950C3E8627EB76B80027160D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 950C3E6627EB76B60027160D;
+					};
+				};
+			};
+			buildConfigurationList = 950C3E6227EB76B60027160D /* Build configuration list for PBXProject "BetBasket" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 950C3E5E27EB76B60027160D;
+			productRefGroup = 950C3E6827EB76B60027160D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				950C3E6627EB76B60027160D /* BetBasket */,
+				950C3E7C27EB76B80027160D /* BetBasketTests */,
+				950C3E8627EB76B80027160D /* BetBasketUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		950C3E6527EB76B60027160D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950C3EC827ECB2310027160D /* Roboto-Regular.ttf in Resources */,
+				950C3EC627ECB2310027160D /* Roboto-Medium.ttf in Resources */,
+				950C3E7727EB76B80027160D /* LaunchScreen.storyboard in Resources */,
+				950C3EC727ECB2310027160D /* Roboto-Light.ttf in Resources */,
+				950C3E7427EB76B80027160D /* Assets.xcassets in Resources */,
+				950C3EC527ECB2310027160D /* Roboto-Bold.ttf in Resources */,
+				9589E53C27F396D80026A2A0 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950C3E7B27EB76B80027160D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950C3E8527EB76B80027160D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78B09BF542BBA06DBC625A2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BetBasket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA9D4681CC22992DDA050B56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BetBasket/Pods-BetBasket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BetBasket/Pods-BetBasket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BetBasket/Pods-BetBasket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		950C3E6327EB76B60027160D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950C3EA727EB7F340027160D /* GeneralError.swift in Sources */,
+				950C3EB527ECAFA60027160D /* UIViewController+Extension.swift in Sources */,
+				9589E53127F2DA2A0026A2A0 /* BasketView.swift in Sources */,
+				950C3EA427EB7F0D0027160D /* NetworkManager.swift in Sources */,
+				950C3ED227ECF71D0027160D /* String+Extension.swift in Sources */,
+				9589E53327F2DE1A0026A2A0 /* OddsManager.swift in Sources */,
+				950C3EBF27ECB1300027160D /* ListViewTableViewCell.swift in Sources */,
+				9589E53827F315C60026A2A0 /* CartListViewController.swift in Sources */,
+				9589E52D27F2368F0026A2A0 /* Date+Extension.swift in Sources */,
+				9589E52F27F2431A0026A2A0 /* OddsView.swift in Sources */,
+				950C3ECC27ECF62A0027160D /* AnalyticsManager.swift in Sources */,
+				9589E52927F226310026A2A0 /* EventDetailViewModel.swift in Sources */,
+				9589E53A27F33E1A0026A2A0 /* WinnerTableViewCell.swift in Sources */,
+				950C3E6F27EB76B60027160D /* ListViewController.swift in Sources */,
+				950C3EBD27ECB1070027160D /* BaseTableViewCell.swift in Sources */,
+				9589E52B27F22E820026A2A0 /* OddsTableViewCell.swift in Sources */,
+				950C3EB327ECA9650027160D /* BaseErrorModel.swift in Sources */,
+				950C3E6B27EB76B60027160D /* AppDelegate.swift in Sources */,
+				950C3EB727ECAFC90027160D /* UIView+Extension.swift in Sources */,
+				950C3ED027ECF6E10027160D /* FirebaseAnalyticsProvider.swift in Sources */,
+				9589E52727F225C60026A2A0 /* EventDetailViewController.swift in Sources */,
+				950C3EAF27EC6F060027160D /* OddsAPI.swift in Sources */,
+				950C3EAB27EC427A0027160D /* ListResponseModel.swift in Sources */,
+				950C3E9F27EB78CA0027160D /* ListViewModel.swift in Sources */,
+				950C3EB927ECAFE80027160D /* UIColor+Extension.swift in Sources */,
+				950C3ED427ECF7D80027160D /* AnalyticsConstants.swift in Sources */,
+				950C3EAD27EC6EF10027160D /* BaseAPI.swift in Sources */,
+				950C3ECE27ECF6510027160D /* AnalyticsEvents.swift in Sources */,
+				9589E53527F30F2E0026A2A0 /* NewOddModel.swift in Sources */,
+				950C3EB127ECA1F00027160D /* OddsResponseModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950C3E7927EB76B80027160D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950C3E8227EB76B80027160D /* BetBasketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950C3E8327EB76B80027160D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950C3E8E27EB76B80027160D /* BetBasketUITestsLaunchTests.swift in Sources */,
+				950C3E8C27EB76B80027160D /* BetBasketUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		950C3E7F27EB76B80027160D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 950C3E6627EB76B60027160D /* BetBasket */;
+			targetProxy = 950C3E7E27EB76B80027160D /* PBXContainerItemProxy */;
+		};
+		950C3E8927EB76B80027160D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 950C3E6627EB76B60027160D /* BetBasket */;
+			targetProxy = 950C3E8827EB76B80027160D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		950C3E7527EB76B80027160D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				950C3E7627EB76B80027160D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		950C3E8F27EB76B80027160D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		950C3E9027EB76B80027160D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		950C3E9227EB76B80027160D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5B91695311908AD72A51524 /* Pods-BetBasket.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4425F79827;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BetBasket/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baranGungor.BetBasket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		950C3E9327EB76B80027160D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78D9280AE274B70FD968EC79 /* Pods-BetBasket.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4425F79827;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BetBasket/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baranGungor.BetBasket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		950C3E9527EB76B80027160D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4425F79827;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baranGungor.BetBasketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetBasket.app/BetBasket";
+			};
+			name = Debug;
+		};
+		950C3E9627EB76B80027160D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4425F79827;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baranGungor.BetBasketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetBasket.app/BetBasket";
+			};
+			name = Release;
+		};
+		950C3E9827EB76B80027160D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4425F79827;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baranGungor.BetBasketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BetBasket;
+			};
+			name = Debug;
+		};
+		950C3E9927EB76B80027160D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4425F79827;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baranGungor.BetBasketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BetBasket;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		950C3E6227EB76B60027160D /* Build configuration list for PBXProject "BetBasket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950C3E8F27EB76B80027160D /* Debug */,
+				950C3E9027EB76B80027160D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		950C3E9127EB76B80027160D /* Build configuration list for PBXNativeTarget "BetBasket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950C3E9227EB76B80027160D /* Debug */,
+				950C3E9327EB76B80027160D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		950C3E9427EB76B80027160D /* Build configuration list for PBXNativeTarget "BetBasketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950C3E9527EB76B80027160D /* Debug */,
+				950C3E9627EB76B80027160D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		950C3E9727EB76B80027160D /* Build configuration list for PBXNativeTarget "BetBasketUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950C3E9827EB76B80027160D /* Debug */,
+				950C3E9927EB76B80027160D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 950C3E5F27EB76B60027160D /* Project object */;
+}
