@@ -20,6 +20,7 @@ final class EventDetailViewModel {
     // MARK: Functions
     func fetchOdds(_ model: ListResponseModel?) {
         guard let model = model, let key = model.key else { return }
+        // I prefered eu as the region to avoid complex structure in UI.
         NetworkManager.shared.sendRequest(model: OddsAPI.odds(key), parameters: ["regions": "eu"],
                                           type: [OddsResponseModel].self) { [weak self] result in
             guard let self = self else { return }

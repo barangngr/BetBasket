@@ -36,6 +36,7 @@ class WinnerTableViewCell: BaseTableViewCell {
         
         oddStack.subviews.forEach({$0.removeFromSuperview()})
         
+        //I preferred to use the first market provider in order to avoid the complicated structure.
         let outcomes = model.bookmakers?.first?.markets?.first?.outcomes
         outcomes?.enumerated().forEach({
             let oddView = WinnerOddView()

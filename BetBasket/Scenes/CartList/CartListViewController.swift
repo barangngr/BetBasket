@@ -67,7 +67,6 @@ extension CartListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // It was intentionally closed (contentView.isUserInteractionEnabled) because there was no time to build a more complex structure.
-
         if dataSource[indexPath.row].oddModel?.homeTeam != nil {
             let cell = tableView.dequeueReusableCell(withIdentifier: "oddsTableViewCell", for: indexPath as IndexPath) as! OddsTableViewCell
             cell.configure(dataSource[indexPath.row].oddModel)

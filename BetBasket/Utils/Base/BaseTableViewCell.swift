@@ -38,3 +38,4 @@ class BaseTableViewCell: UITableViewCell {
     }
     
 }
+// The base structure could be applied in the 3 viewcontrollers used, but I didn't want to use it because I applied it to the cells.

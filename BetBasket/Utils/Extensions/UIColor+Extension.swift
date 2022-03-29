@@ -20,4 +20,3 @@ extension UIColor {
     static let basketColor = #colorLiteral(red: 0.9475112557, green: 0.06939077377, blue: 0, alpha: 1)
     
 }
-

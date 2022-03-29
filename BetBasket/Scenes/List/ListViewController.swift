@@ -80,11 +80,6 @@ extension ListViewController: ListViewModelDelegate {
         reloadTableView()
     }
     
-    func didSearchEvents(_ data: [ListResponseModel]) {
-        dataSource = data
-        reloadTableView()
-    }
-    
     func showError(_ error: Error) {
         showAlert(error.localizedDescription)
     }

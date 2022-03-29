@@ -5,7 +5,6 @@
 //  Created by Baran Gungor on 24.03.2022.
 //
 
-
 typealias AnalyticsParams = [AnalyticsConstants: Any]?
 
 enum AnalyticsConstants: String {

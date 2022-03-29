@@ -9,7 +9,6 @@ import Foundation
 
 protocol ListViewModelDelegate: AnyObject {
     func didFetchEvents(_ data: [ListResponseModel])
-    func didSearchEvents(_ data: [ListResponseModel])
     func showError(_ error: Error)
 }
 
@@ -34,11 +33,12 @@ final class ListViewModel {
     }
     
     func searchBarResponse(_ searchText: String) {
+        // I chose to use a single delegate method because their functions are the same. But two different funcs could be defined under different naming.
         guard let mainDataSource = mainDataSource else { return }
         if searchText == "" {
-            delegate?.didSearchEvents(mainDataSource)
+            delegate?.didFetchEvents(mainDataSource)
         } else {
-            delegate?.didSearchEvents(mainDataSource.filter({ $0.title?.contains(searchText.uppercased()) ?? false }))
+            delegate?.didFetchEvents(mainDataSource.filter({ $0.title?.contains(searchText.uppercased()) ?? false }))
         }
     }
     
